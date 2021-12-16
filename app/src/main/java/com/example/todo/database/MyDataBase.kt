@@ -7,7 +7,7 @@ import com.example.todo.database.dao.TodoDao
 import com.example.todo.database.model.Todo
 
 
-@Database(entities = [Todo::class], version = 2, exportSchema = false)
+@Database(entities = [Todo::class], version = 3, exportSchema = false)
 @TypeConverters(DateConverter::class)
 abstract class MyDataBase : RoomDatabase() {
 

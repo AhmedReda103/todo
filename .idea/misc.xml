@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/drawable/rounded_primary.xml" value="0.26875" />
         <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/layout/add_todo.xml" value="0.1296875" />
         <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/layout/fragment_update_to_do_activity.xml" value="0.1296875" />
+        <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/layout/item_todo.xml" value="0.2" />
         <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/layout/list_fragment.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/layout/settings_fragment.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Mostafa/AndroidStudioProjects/ToDo/app/src/main/res/menu/menu.xml" value="0.2526041666666667" />

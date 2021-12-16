@@ -10,14 +10,15 @@ import java.util.*
 @Entity
 data class Todo(
     @ColumnInfo
-    @PrimaryKey  //by default make
-    val id: Int = 0,
+    @PrimaryKey(autoGenerate = true) //by default make
+    val id: Int? = null,
     @ColumnInfo
     val name: String? = null,
     @ColumnInfo
     val description: String? = null,
     @ColumnInfo
     val date: Date? = null,
+
     @ColumnInfo
     val isDone: Boolean? = false
 )
