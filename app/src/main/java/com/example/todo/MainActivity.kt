@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var bottomNavigationView: BottomNavigationView
     lateinit var addButton: FloatingActionButton
+    val todoListFragment = TodoListFragment()
+    val settingsFragment = SettingsFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,9 +27,9 @@ class MainActivity : AppCompatActivity() {
         }
         bottomNavigationView.setOnItemSelectedListener { item ->
             if (item.itemId == R.id.navigation_list) {
-                pushFragment(TodoListFragment())
+                pushFragment(todoListFragment)
             } else if (item.itemId == R.id.navigation_settings) {
-                pushFragment(SettingsFragment())
+                pushFragment(settingsFragment)
             }
             return@setOnItemSelectedListener true
 
@@ -35,13 +37,20 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.selectedItemId = R.id.navigation_list
 
-
         MyDataBase.getInstance(this)
     }
 
     private fun sowAddButtomSeet() {
         val addBottomSheet = AddTodoBottomSheet();
         addBottomSheet.show(supportFragmentManager, "")
+        addBottomSheet.onTodoAddedLisner = object : AddTodoBottomSheet.onTodoAddedListner {
+            override fun onTodoAdded() {
+                //refreshtodo list from database inside listfragment
+                //when added in seeting fragment to no get crach
+                if (todoListFragment.isVisible)
+                    todoListFragment.getTodoListFromDB()
+            }
+        }
     }
 
     private fun pushFragment(fragment: Fragment) {

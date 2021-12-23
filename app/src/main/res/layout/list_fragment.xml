@@ -21,7 +21,7 @@
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@id/calendarView"
+        app:layout_constraintTop_toBottomOf="@+id/calendarView"
         tools:listitem="@layout/item_todo" />
 
 
